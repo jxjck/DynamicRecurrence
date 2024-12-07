@@ -1,6 +1,4 @@
 import builtins
-
-# Implementation of argminsum numbers type
 class argminsum:
     def __init__(self, val, cnfg):
         self.val = val
@@ -19,8 +17,6 @@ class argminsum:
     
     def __repr__(self):
         return str(self)
-
-# Override built-ins
 def min(u,v):
     if type(u) is not argminsum:
         return builtins.min(u,v)
@@ -30,6 +26,5 @@ def min(u,v):
         else:
             return v
 
-# Constants
 zero = argminsum(0,[])
 inf = argminsum(float("inf"),set())
